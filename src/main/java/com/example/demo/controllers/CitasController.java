@@ -47,8 +47,8 @@ public class CitasController {
 		return Messag;
 	}
 	
-	@PostMapping(value = "/{Id}")
-	public String crearcita(@PathVariable Long Idci, @RequestBody Citas cita) {
+	@PostMapping
+	public String crearcita(@RequestBody Citas cita) {
 		String Messag = "Se ha creado exitosamente";
 		citaservice.createcita(cita);
 		return Messag;

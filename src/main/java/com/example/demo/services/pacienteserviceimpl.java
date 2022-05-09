@@ -6,11 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.pacientesdao;
+import com.example.demo.dao.polizadao;
 import com.example.demo.entities.paciente;
 @Service
 public class pacienteserviceimpl implements pacienteservice {
 	@Autowired
 	pacientesdao Pacientedao;
+	@Autowired
+	polizadao Polizadao;
 
 	@Override
 	public List<paciente> findAll() {
@@ -29,8 +32,12 @@ public class pacienteserviceimpl implements pacienteservice {
 		// TODO Auto-generated method stub
 		if(Pacientedao.existsById(Id)) {
 		Pacientedao.deleteById(Id);
+	
 		}
-		
+		if(Polizadao.existsById(Id)) {
+			Polizadao.deleteById(Id);
+			}
+	
 	}
 
 	@Override

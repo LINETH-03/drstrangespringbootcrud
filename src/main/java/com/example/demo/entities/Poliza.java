@@ -24,6 +24,7 @@ public class Poliza {
 	private String FechaInicio;
 	@Column(name = "fechafin")
 	private String FechaFin;
+	
 	public Long getIdpoliza() {
 		return Idpoliza;
 	}
