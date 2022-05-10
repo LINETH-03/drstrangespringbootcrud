@@ -39,11 +39,12 @@ public class polizaController {
 	}
 	
 	@PutMapping(value = "/{Id}")
-	public String modificarPoliza(@PathVariable Long IdPoliza, @RequestBody Poliza poliza) {
+	public String modificarPoliza(@PathVariable Long Id, @RequestBody Poliza poliza) {
 		String Messag = "Se ha modificado exitosamente";
 		
-		Polizaservice.modifypoliza(IdPoliza, poliza);
+		Polizaservice.modifypoliza(Id, poliza);
 		return Messag;
+		
 	}
 
 

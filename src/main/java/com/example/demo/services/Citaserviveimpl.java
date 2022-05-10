@@ -12,6 +12,7 @@ import com.example.demo.entities.Citas;
 public class Citaserviveimpl implements Citaservice {
 	@Autowired
 	Citadao CitaDao;
+	
 
 	@Override
 	public List<Citas> findAllC() {

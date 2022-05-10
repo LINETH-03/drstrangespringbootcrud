@@ -41,9 +41,9 @@ public class CitasController {
 	}
 	
 	@PutMapping(value = "/{Id}")
-	public String modificarCITA(@PathVariable Long Idci, @RequestBody Citas cita) {
+	public String modificarCITA(@PathVariable Long Id, @RequestBody Citas cita) {
 		String Messag = "Se ha modificado exitosamente";
-		citaservice.modifycitaC(Idci, cita);
+		citaservice.modifycitaC(Id, cita);
 		return Messag;
 	}
 	

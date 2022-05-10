@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.dao.Citadao;
 import com.example.demo.dao.pacientesdao;
 import com.example.demo.dao.polizadao;
 import com.example.demo.entities.paciente;
@@ -14,6 +15,8 @@ public class pacienteserviceimpl implements pacienteservice {
 	pacientesdao Pacientedao;
 	@Autowired
 	polizadao Polizadao;
+	@Autowired
+	Citadao citaddo;
 
 	@Override
 	public List<paciente> findAll() {
@@ -36,6 +39,9 @@ public class pacienteserviceimpl implements pacienteservice {
 		}
 		if(Polizadao.existsById(Id)) {
 			Polizadao.deleteById(Id);
+			}
+		if(citaddo.existsById(Id)) {
+			citaddo.deleteById(Id);
 			}
 	
 	}
